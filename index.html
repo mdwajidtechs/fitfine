@@ -1,1 +1,96 @@
 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Gym Website</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+        }
+
+        .container{
+            width:700px;
+            margin:30px auto;
+            background:#fff;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+
+        button{
+            background:#28a745;
+            color:#fff;
+            border:none;
+            padding:12px 25px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Create Your Gym Website</h2>
+
+<form action="https://deals.wajidtechs.com/fitfast/save_gym"
+      method="POST"
+      enctype="multipart/form-data">
+
+    <label>User Name</label>
+    <input type="text" name="username" required>
+
+    <label>Gym Name</label>
+    <input type="text" name="gym_name" required>
+
+    <label>Mobile</label>
+    <input type="text" name="mobile" required>
+
+    <label>Email</label>
+    <input type="email" name="email">
+
+    <label>Location</label>
+    <input type="text" name="location">
+
+    <label>Address</label>
+    <textarea name="address"></textarea>
+
+    <label>Description</label>
+    <textarea name="description"></textarea>
+
+    <label>Logo</label>
+    <input type="file" name="logo">
+
+    <label>Image 1</label>
+    <input type="file" name="image1">
+
+    <label>Image 2</label>
+    <input type="file" name="image2">
+
+    <label>Image 3</label>
+    <input type="file" name="image3">
+
+    <label>Image 4</label>
+    <input type="file" name="image4">
+
+    <label>Image 5</label>
+    <input type="file" name="image5">
+
+    <button type="submit">
+        Generate Website
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>
