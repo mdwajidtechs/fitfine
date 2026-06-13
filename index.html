@@ -1,94 +1,277 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Create Gym Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            font-family: Arial;
-            background:#f4f4f4;
-        }
+<title>Create Your Business Website</title>
 
-        .container{
-            width:700px;
-            margin:30px auto;
-            background:#fff;
-            padding:20px;
-            border-radius:10px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        input, textarea{
-            width:100%;
-            padding:10px;
-            margin-top:5px;
-            margin-bottom:15px;
-        }
+<style>
 
-        button{
-            background:#28a745;
-            color:#fff;
-            border:none;
-            padding:12px 25px;
-            cursor:pointer;
-        }
-    </style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    padding:30px 15px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.header{
+    background:linear-gradient(135deg,#ff6b35,#ff914d);
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.header p{
+    opacity:.9;
+}
+
+.form-area{
+    padding:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.field.full{
+    grid-column:1/3;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:8px;
+    color:#333;
+}
+
+input,
+textarea{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    transition:.3s;
+    font-size:15px;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#ff6b35;
+    box-shadow:0 0 10px rgba(255,107,53,.2);
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.upload-box{
+    border:2px dashed #ccc;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    background:#fafafa;
+}
+
+.upload-box input{
+    border:none;
+}
+
+.btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#ff6b35,#ff914d);
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:20px;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(255,107,53,.35);
+}
+
+.features{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.feature{
+    background:#f8fafc;
+    padding:12px;
+    border-radius:10px;
+    flex:1;
+    min-width:150px;
+    text-align:center;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .header h1{
+        font-size:24px;
+    }
+
+}
+
+</style>
 </head>
 <body>
 
 <div class="container">
 
-<h2>Create Your Gym Website</h2>
+    <div class="header">
+        <h1>Create Your Business Website</h1>
+        <p>Generate your professional business website in minutes</p>
+    </div>
 
-<form action="https://deals.wajidtechs.com/fitfast/save_gym"
-      method="POST"
-      enctype="multipart/form-data">
+    <div class="form-area">
 
-    <label>User Name</label>
-    <input type="text" name="username" required>
+        <div class="features">
+            <div class="feature">⚡ Fast Setup</div>
+            <div class="feature">📱 Mobile Friendly</div>
+            <div class="feature">🌐 Custom Website</div>
+            <div class="feature">🚀 Instant Publish</div>
+        </div>
 
-    <label>Gym Name</label>
-    <input type="text" name="gym_name" required>
+        <form action="https://deals.wajidtechs.com/fitfast/save_gym"
+              method="POST"
+              enctype="multipart/form-data">
 
-    <label>Mobile</label>
-    <input type="text" name="mobile" required>
+            <div class="grid">
 
-    <label>Email</label>
-    <input type="email" name="email">
+                <div class="field">
+                    <label>User Name</label>
+                    <input type="text" name="username" required>
+                </div>
 
-    <label>Location</label>
-    <input type="text" name="location">
+                <div class="field">
+                    <label>Business Name</label>
+                    <input type="text" name="gym_name" required>
+                </div>
 
-    <label>Address</label>
-    <textarea name="address"></textarea>
+                <div class="field">
+                    <label>Mobile Number</label>
+                    <input type="text" name="mobile" required>
+                </div>
 
-    <label>Description</label>
-    <textarea name="description"></textarea>
+                <div class="field">
+                    <label>Email Address</label>
+                    <input type="email" name="email">
+                </div>
 
-    <label>Logo</label>
-    <input type="file" name="logo">
+                <div class="field full">
+                    <label>Location</label>
+                    <input type="text" name="location">
+                </div>
 
-    <label>Image 1</label>
-    <input type="file" name="image1">
+                <div class="field full">
+                    <label>Business Address</label>
+                    <textarea name="address"></textarea>
+                </div>
 
-    <label>Image 2</label>
-    <input type="file" name="image2">
+                <div class="field full">
+                    <label>Business Description</label>
+                    <textarea name="description"></textarea>
+                </div>
 
-    <label>Image 3</label>
-    <input type="file" name="image3">
+                <div class="field">
+                    <label>Business Logo</label>
+                    <div class="upload-box">
+                        <input type="file" name="logo">
+                    </div>
+                </div>
 
-    <label>Image 4</label>
-    <input type="file" name="image4">
+                <div class="field">
+                    <label>Gallery Image 1</label>
+                    <div class="upload-box">
+                        <input type="file" name="image1">
+                    </div>
+                </div>
 
-    <label>Image 5</label>
-    <input type="file" name="image5">
+                <div class="field">
+                    <label>Gallery Image 2</label>
+                    <div class="upload-box">
+                        <input type="file" name="image2">
+                    </div>
+                </div>
 
-    <button type="submit">
-        Generate Website
-    </button>
+                <div class="field">
+                    <label>Gallery Image 3</label>
+                    <div class="upload-box">
+                        <input type="file" name="image3">
+                    </div>
+                </div>
 
-</form>
+                <div class="field">
+                    <label>Gallery Image 4</label>
+                    <div class="upload-box">
+                        <input type="file" name="image4">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Gallery Image 5</label>
+                    <div class="upload-box">
+                        <input type="file" name="image5">
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn" type="submit">
+                🚀 Generate My Website
+            </button>
+
+        </form>
+
+    </div>
 
 </div>
 
